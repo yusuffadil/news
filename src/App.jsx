@@ -3,6 +3,7 @@ import "./App.css";
 import Header from "./components/common/header/Header";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Homepages from "./components/home";
+import Searchpages from "./components/search";
 import Footer from "./components/common/footer";
 
 const App = () => {
@@ -12,8 +13,8 @@ const App = () => {
         <Header />
         <Switch>
           <Route exact path="/" component={Homepages} />
-          {/* <Route path="/singlepage/:id" exact component={SinglePage} />
-          <Route exact path="/culture" component={Culture} /> */}
+          <Route exact path="/search" component={Homepages} />
+          <Route path="/search/:id" exact component={Searchpages} />
         </Switch>
         <Footer />
       </Router>

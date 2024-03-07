@@ -87,10 +87,14 @@
   grid-row-end: 17;
 }
 
+span, h1 {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
 .hero .text h1 {
   font-weight: 500;
   margin: 10px 0;
-  font-size: 15px;
+  font-size: 13px;
 }
 .hero .author span {
   font-size: 14px;
@@ -116,6 +120,10 @@
 }
 
 @media screen and (max-width: 768px) {
+  .hero .box:nth-child(1) h1,
+  .hero .box:nth-child(10) h1 {
+    font-size: 20px;
+  }
   .hero .container {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
